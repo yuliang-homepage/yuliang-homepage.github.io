@@ -1,14 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=800">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-        /* Color scheme stolen from Sergey Karayev */
+    <title>Yu Liang - Personal Homepage</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 配色方案参考 Sergey Karayev */
+<!DOCTYPE html>
+<html lang="zh-CN">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yu Liang - Personal Homepage</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* 其余样式保持不变，以下仅展示调整过的部分 */
         a {
             color: #1772d0;
             text-decoration: none;
@@ -20,57 +45,37 @@
             text-decoration: none;
         }
 
-        body,
-        td,
-        th,
-        tr,
-        p,
-        a {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px
-        }
-
-        .hp-photo {
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-        }
-
         strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
+            font-weight: 600; /* Inter 的 Semi-Bold */
         }
 
-        strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
-        }
-
-        heading {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        .section-heading {
             font-size: 24px;
+            font-weight: 700;
         }
 
-        papertitle {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 15px;
-            font-weight: 700
-        }
-
-        name {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        .name {
             font-size: 32px;
+            font-weight: 700;
+        }
+
+        .paper-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+
+        .one,
+        .two {
+            width: 160px;
+            height: 160px;
         }
 
         .one {
-            width: 160px;
-            height: 160px;
             position: relative;
         }
 
         .two {
-            width: 160px;
-            height: 160px;
             position: absolute;
             transition: opacity .2s ease-in-out;
             -moz-transition: opacity .2s ease-in-out;
@@ -83,10 +88,23 @@
             -webkit-transition: opacity .2s ease-in-out;
         }
 
+        .hp-photo {
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            max-width: 90%;
+            overflow: hidden;
+        }
+
         span.highlight {
             background-color: #ffffd0;
         }
 
+        .text-red {
+            color: red;
+        }
+
+        /* 新闻折叠区 */
         #moreNews {
             display: none;
         }
@@ -96,610 +114,258 @@
             cursor: pointer;
             text-decoration: underline;
         }
-    </style>
 
-    <title>Yu Liang</title>
+        /* 页面主体容器，原表格宽度改为 max-width 以适应移动端 */
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* 打印样式（可选） */
+        @media print {
+            .page-container {
+                max-width: 100%;
+            }
+
+            #moreButton {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tbody>
-            <tr>
-                <td>
-                    <!--SECTION bio -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td width="68%" valign="middle">
-                                    <p align="center">
-                                        <name>Yu Liang 梁 堉</name>
-                                    </p>
-                                    <p align="justify">
-                                        I am currently an Assistant Professor
-                                        of the <a href="https://cs.bjut.edu.cn/index.htm">College of Computer
-                                            Science</a>, <a href="https://www.bjut.edu.cn/">Beijing University of
-                                            Technology</a>, China. My research interests lie in multimodal artificial
-                                        intelligence, with a focus on intelligent
-                                        perception, human–computer interaction, cognitive modeling, and educational
-                                        technologies.
-                                        <br><br>
-                                        Prior to this, I received my Ph.D. degree in 2022 from the <a
-                                            href="https://scse.buaa.edu.cn/">School of
-                                            Computer Science and Engineering</a> and the <a
-                                            href="https://hc.buaa.edu.cn">Shen Yuan
-                                            Honors College</a> (an elite program), <a
-                                            href="https://www.buaa.edu.cn/">Beihang University</a>, China,
-                                        under the supervision of Prof. <a
-                                            href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun
-                                            Wu</a>. I also obtained my B.Sc. degree from <a
-                                            href="https://www.buaa.edu.cn/">Beihang University</a> in 2017.
-                                        <br><br>
-
-                                        <strong>Email:</strong> yuliang@bjut.edu.cn | yliang@buaa.edu.cn <br>
-                                        <!-- <strong>Address:</strong>100 Pingleyuan, Chaoyang District, Beijing 100124, China
-                                        <br> -->
-
-
-
-                                    </p>
-                                    <p align="center">
-                                        <a href="https://scholar.google.com/citations?user=Ky7Ekn0AAAAJ">Google
-                                            Scholar</a> |
-                                        <a
-                                            href="https://www.researchgate.net/profile/Yu-Liang-18?ev=hdr_xprf">ResearchGate</a>
-                                        |
-                                        <a href="https://github.com/liangyubuaa"> Github </a> |
-
-                                        <a href="https://cs.bjut.edu.cn/info/1416/1261.htm">学院官网</a> |
-
-                                        <a href="https://cs.bjut.edu.cn/info/1510/3735.htm">研究生招生</a>
-
-
-                                    </p>
-                                </td>
-                                <td align="right"> <img style="max-width:90%;overflow:hidden;" class="hp-photo"
-                                        src="assets\bio.jpg"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-
-                    <!-- SECTION Research
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Research</heading>
-                                    <p align="justify">
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr> -->
-
-
-                    <!--SECTION News -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>News</heading>
-
-                                    <p style="font-size:14px"> <strong>
-                                            <font color="red">[Top]</font>
-                                        </strong> Join our lab and code your future! 欢迎有兴趣在<a
-                                            href="https://www.bjut.edu.cn/">北京工业大学</a> (双一流&211工程) <a
-                                            href="https://cs.bjut.edu.cn/index.htm">计算机学院</a>攻读硕士研究生的同学联系我.
-                                    </p>
-
-
-                                    <p style="font-size:14px;"> <strong>
-                                            <font color="red">[Top]</font>[2025.07]
-                                        </strong>
-                                        Call for Paper: Applied Sciences (JCR Q2, IF 2.5) — Special Issue
-                                        "<a href="https://www.mdpi.com/journal/applsci/special_issues/VEOEP7430U">Artificial
-                                            Intelligence Technologies for Education: Advancements, Challenges, and
-                                            Impacts, 2nd Edition</a>". Deadline: <u><del>31 March 2026</del></u> <u>31
-                                            October 2026</u>.
-                                    </p>
-
-                                    <p style="font-size:14px"> <strong>[2026.06]</strong> One
-                                        paper on multimodal emotion recognition accepted by Neurocomputing.
-                                    </p>
-
-                                    <p style="font-size:14px"> <strong>[2026.05]</strong> One
-                                        paper on LoRa networks accepted by Ad Hoc Networks.
-                                    </p>
-
-
-                                    <p style="font-size:14px"> <strong>[2026.04]</strong> One
-                                        paper on face aging accepted by IEEE Transactions on Image Processing (TIP).
-                                    </p>
-
-                                    <p style="font-size:14px"> <strong>[2026.03]</strong> One
-                                        paper on rumor detection accepted by 《计算机工程》.</p>
-
-
-                                    <p style="font-size:14px"> <strong>[2026.02]</strong> One
-                                        paper on EEG-based emotion recognition framework accepted by IEEE Journal of
-                                        Biomedical and Health Informatics (JBHI).</p>
-
-                                    <p style="font-size:14px"> <strong>[2026.01]</strong> One
-                                        paper on endoscopic image segmentation accepted by Biomedical Signal
-                                        Processing and Control.</p>
-
-                                    <div id="moreNews">
-
-
-                                        <p style="font-size:14px"> <strong>[2025.11]</strong> One
-                                            paper on fall detection accepted by 2025 IEEE International Conference on
-                                            Image Processing, Computer Vision and Machine Learning (ICICML).</p>
-
-
-                                        <p style="font-size:14px"> <strong>[2025.11]</strong> One
-                                            paper on remote sensing object detection accepted by Scientific
-                                            Reports.</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.11]</strong> One
-                                            paper on edge intelligence network accepted by International Journal of
-                                            Intelligent Networks (IJIN).</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.10]</strong> One
-                                            paper on deepfake video detection accepted by IEEE Transactions on Consumer
-                                            Electronics (TCE).</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.08]</strong> Received funding from the
-                                            National Natural
-                                            Science Foundation of China.</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.08]</strong> One
-                                            paper on citrus detection accepted by Computers and Electronics in
-                                            Agriculture.</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.06]</strong> One
-                                            paper on EEG-based emotion recognition accepted by 2025 IEEE International
-                                            Conference on Systems, Man, and Cybernetics (SMC).</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.03]</strong> One
-                                            paper on power cable detection accepted by 2025 IEEE International
-                                            Seminar on Artificial Intelligence, Networking and Information Technology
-                                            (AINIT).</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.03]</strong> One
-                                            paper on student performance prediction accepted by Scientific Reports.
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2025.01]</strong> One
-                                            paper on few-shot learning accepted by Pattern Recognition.</p>
-
-                                        <p style="font-size:14px"> <strong>[2025.01]</strong> Received funding from the
-                                            Beijing Natural
-                                            Science Foundation.</p>
-
-
-                                        <p style="font-size:14px"> <strong>[2024.11]</strong> One
-                                            paper on multi label text classification accepted by Scientific
-                                            Reports.
-                                        </p>
-
-
-                                        <p style="font-size:14px"> <strong>[2024.10]</strong> One
-                                            paper on automatic text summarization accepted by CCF Transactions on
-                                            Pervasive
-                                            Computing and Interaction.</p>
-
-
-
-                                        <p style="font-size:14px"> <strong>[2024.09]</strong> Selected into an
-                                            Executive Member of the <a
-                                                href="https://www.ccf.org.cn/Chapters/TC/TC_Listing/TCIR/">
-                                                Technical Committee on Intelligent
-                                                Robot, China Computer Federation (CCF TCIR)</a>.</p>
-
-                                        <p style="font-size:14px"> <strong>[2024.07]</strong> One
-                                            paper on medical image segmentation accepted by Neurocomputing.</p>
-
-                                        <p style="font-size:14px"> <strong>[2024.04]</strong> One
-                                            paper on EEG-based emotion classification accepted by Journal of Neural
-                                            Engineering (JNE).</p>
-
-                                        <p style="font-size:14px"> <strong>[2024.04]</strong> One
-                                            paper on vision-fused attack accepted by IJCAI 2024.</p>
-
-                                        <p style="font-size:14px"> <strong>[2024.03]</strong> One
-                                            paper on knowledge graph accepted by Applied Sciences.</p>
-
-                                        <p style="font-size:14px"> <strong>[2023.12]</strong> One paper on
-                                            reinforcement learning and graph neural network accepted by ICDE
-                                            2024.
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2023.12]</strong> Received funding from the
-                                            Science and Technology Project of the State Grid Corporation of China
-                                            (SGCC).
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2023.11]</strong> One
-                                            and one papers on smart education accepted by Applied
-                                            Sciences.
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2023.09]</strong> One
-                                            paper on educational knowledge graph accepted by 2023 IEEE Frontiers in
-                                            Education Conference (FIE).</p>
-
-                                        <p style="font-size:14px;"> <strong>[2023.07]</strong>
-                                            Call for Paper: Applied Sciences (JCR Q1, IF 2.5) — Special Issue
-                                            "<a href="https://www.mdpi.com/journal/applsci/special_issues/A10EVOIBT7">Artificial
-                                                Intelligence Technologies for Education: Advancements, Challenges, and
-                                                Impacts</a>". <u>Deadline: 30 June 2025</u>.
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2023.06]</strong> One paper on
-                                            IoT
-                                            and edge computing accepted by the IEEE 48th Conference on Local Computer
-                                            Networks (LCN).</p>
-
-                                        <p style="font-size:14px"> <strong>[2023.04]</strong> Received funding from the
-                                            Beijing
-                                            Postdoctoral Research Foundation.</p>
-
-                                        <p style="font-size:14px"> <strong>[2023.02]</strong> One
-                                            paper on graph transformer accepted by AAAI 2023.</p>
-
-                                        <p style="font-size:14px"> <strong>[2022.11]</strong> Received funding from the
-                                            Open Research
-                                            Fund
-                                            of the State Key Lab. of Software Development Environment.</p>
-
-                                        <p style="font-size:14px"> <strong>[2022.11]</strong> One paper on
-                                            peer
-                                            grading accepted by IEEE Transactions on Learning Technologies.</p>
-
-                                        <p style="font-size:14px"> <strong>[2022.11]</strong> Received the Ph.D degree
-                                            with a <strong>certificate of honor</strong> from Beihang University.</p>
-
-                                        <p style="font-size:14px"> <strong>[2022.10]</strong> One paper on
-                                            interpretable deep knowledge tracing accepted by Scientific Reports.
-                                        </p>
-
-                                        <p style="font-size:14px"> <strong>[2022.03]</strong> One paper
-                                            on
-                                            deep knowledge tracing accepted by Scientific Reports.</p>
-                                    </div>
-
-                                    <p id="moreButton" onclick="toggleNews()">More...</p>
-
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-
-
-                    <!--SECTION Students -->
-
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Students</heading>
-                                    <p align="justify">
-                                    <ul>
-                                        <li>Master Students
-                                            <ul>
-                                                <li>
-                                                    2026: Ziheng Wang (1 paper accepted by
-                                                    《计算机工程》), Yudong Zhao
-                                                </li>
-                                                <li>
-                                                    2025: Jiayan Ma (1 paper accepted by
-                                                    《计算机工程》), Jiawei Wu(1 paper under review by
-                                                    《自动化学报》), Xiao Li, Liwen Tian (1 paper under review by
-                                                    《自动化学报》)
-                                                </li>
-                                                <li>
-                                                    2024: Yongbin Wang (1 paper accepted by
-                                                    Scientific Reports), Rongqi Cao&dagger; (1 paper accepted
-                                                    by IEEE JBHI)
-                                                </li>
-                                                <!-- <li>
-                                                    2023: Shuang Niu&dagger; (1 paper under review by IEEE TNNLS)
-                                                </li> -->
-
-                                            </ul>
-                                        </li>
-                                        <!-- <li>Undergraduate Students
-                                            <ul>
-
-                                            </ul>
-                                        </li> -->
-                                        <li>Alumni
-                                            <ul>
-                                                <li>
-                                                    Shuang Niu&dagger;, Master, 09/23 - 06/26, Graduation
-                                                    Destination: Bank of Communications
-                                                </li>
-
-                                                <li>
-                                                    Chenlong Zhang&dagger;, Master, 09/22 - 06/25, Graduation
-                                                    Destination: China Telecom Research Institute
-                                                </li>
-                                                <li> Zaitian Wang&dagger;, Master, 09/22 - 06/25, Graduation
-                                                    Destination: Agricultural Bank of China</li>
-                                                <li>
-                                                    Lexin Yang, Undergraduate, 03/24 - 06/25, Graduation
-                                                    Destination: Master@University of Pennsylvania
-                                                </li>
-                                                <li>
-                                                    Shuyi Sun, Undergraduate, 03/24 - 06/25, Graduation
-                                                    Destination: Master@University of Pennsylvania
-                                                </li>
-                                                <li>
-                                                    Ziteng Zhang, Undergraduate, 03/24 - 06/25, Graduation
-                                                    Destination: Master@Nanyang Technological University
-                                                </li>
-                                                <li>
-                                                    Zelong Li, Undergraduate, 03/24 - 06/25, Graduation
-                                                    Destination: Master@Northeastern University
-                                                </li>
-
-
-
-                                            </ul>
-
-
-                                        </li>
-                                        <br />
-                                        &dagger;: co-supervised
-                                    </ul>
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-
-                    <!-- Selected Publications
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Selected Publications</heading>
-                                    <p style="font-size:14px"> You can find the full list on <a
-                                            href="https://scholar.google.com/citations?user=Ky7Ekn0AAAAJ">Google
-                                            Scholar</a>.
-                                    </p>
-
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td width="20%"><img src="assets\FetchEEG.pdf" alt="USENIX2023" width="180" height="110"
-                                        style="border-style: none"></td>
-                                <td width="80%" valign="top">
-                                    <p>
-                                        <a href="https://iopscience.iop.org/article/10.1088/1741-2552/ad4743">
-                                            <papertitle>FetchEEG: a hybrid approach combining feature extraction and
-                                                temporal-channel joint attention for EEG-based emotion classification
-                                            </papertitle>
-                                        </a>
-                                        <br><strong>Yu Liang</strong>, Chenlong Zhang, Shan An, et al. <br><br> Accepted
-                                        by </em><a href="https://iopscience.iop.org/journal/1741-2552">Journal of Neural
-                                            Engineering
-                                        </a></em><br>
-
-                                        <a href="https://iopscience.iop.org/article/10.1088/1741-2552/ad4743">
-                                            <font color="red">pdf</font>
-                                        </a> |
-                                        <a href="https://github.com/liangyubuaa/FetchEEG">
-                                            <font color="red">code</font>
-                                        </a>
-
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="20%"><img src="assets\CLGT.pdf" alt="USENIX2023" width="180" height="110"
-                                        style="border-style: none"></td>
-                                <td width="80%" valign="top">
-                                    <p>
-                                        <a href="https://dl.acm.org/doi/10.1609/aaai.v37i13.26893">
-                                            <papertitle>CLGT: A Graph Transformer for Student Performance Prediction in
-                                                Collaborative Learning</papertitle>
-                                        </a>
-                                        <br>Tianhao Peng, <strong>Yu Liang*</strong>, Wenjun Wu, et al. <br><br>
-                                        Accepted by </em><a href="https://aaai-23.aaai.org/">AAAI
-                                            2023
-                                        </a></em><br>
-
-                                        <a href="https://dl.acm.org/doi/10.1609/aaai.v37i13.26893">
-                                            <font color="red">pdf</font>
-                                        </a> |
-                                        <a href="https://github.com/Tianhao-Peng/CLGT">
-                                            <font color="red">code</font>
-                                        </a>
-
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="20%"><img src="assets\HELP-DKT.pdf" alt="USENIX2023" width="180" height="110"
-                                        style="border-style: none"></td>
-                                <td width="80%" valign="top">
-                                    <p>
-                                        <a href="https://www.nature.com/articles/s41598-022-07956-0">
-                                            <papertitle>HELP-DKT: An Interpretable Cognitive Model of How Students Learn
-                                                Programming Based on Deep Knowledge Tracing</papertitle>
-                                        </a>
-                                        <br><strong>Yu Liang</strong>, Tianhao Peng, Yanjun Pu, et al. <br><br>
-                                        Accepted by </em><a href="https://www.nature.com/srep">Scientific
-                                            Report</a></em>
-                                        <br>
-
-                                        <a href="https://www.nature.com/articles/s41598-022-07956-0">
-                                            <font color="red">pdf</font>
-                                        </a> |
-                                        <a href="https://github.com/liangyubuaa/HELP-DKT">
-                                            <font color="red">code</font>
-                                        </a>
-
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="20%"><img src="assets\EAKT.pdf" alt="USENIX2023" width="180" height="110"
-                                        style="border-style: none"></td>
-                                <td width="80%" valign="top">
-                                    <p>
-                                        <a href="https://www.nature.com/articles/s41598-022-22539-9">
-                                            <papertitle>Peer Grading Eliciting Truthfulness Based on Autograder
-                                            </papertitle>
-                                        </a>
-                                        <br>Yong Han, Wenjun Wu, <strong>Yu Liang</strong>, et al. <br><br>
-                                        Accepted by </em><a
-                                            href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4620076">IEEE
-                                            Transactions on Learning Technologies</a></em>
-                                        <br>
-                                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9928373">
-                                            <font color="red">pdf</font>
-                                        </a>
-
-                                    <p></p>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <hr> -->
-
-                    <!--Fundings and Projects -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Fundings and Projects</heading>
-                                    <p align="justify">
-                                    <ul>
-                                        <li>
-                                            National Natural Science Foundation of China, China, 2026.01 to 2028.12.
-
-                                        </li>
-
-                                        <li>
-                                            Beijing Natural Science Foundation, China, 2025.01 to 2026.12.
-                                        </li>
-                                        <li>
-                                            Science and Technology Project of the State Grid Corporation of China
-                                            (SGCC),
-                                            China, 2023.12 to 2025.12.
-                                        </li>
-
-                                        <li>
-                                            Beijing Postdoctoral Research Foundation, China, 2023.05 to 2025.01.
-                                        </li>
-
-                                        <li>
-                                            Open Research Fund of the State Key Lab. of Software
-                                            Development Environment, China, 2022.11 to 2023.10.
-                                        </li>
-                                    </ul>
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-                    <!--SECTION Services -->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Services</heading>
-                                    <p align="justify">
-                                    <ul>
-                                        <li>
-                                            Guest Editor of Applied Sciences.
-                                        </li>
-                                        <li> PC/Reviewer for AAAI, IJCAI, ICCV, KDD,
-                                            DSAA, FIE...
-                                        </li>
-                                        <li>
-                                            Journal Reviewers of Humanities and Social Sciences Communications,
-                                            Pattern Recognition, Expert Systems With Applications, IEEE Transactions on
-                                            Affective
-                                            Computing,
-                                            Applied Soft Computing Journal, International
-                                            Journal
-                                            of Machine Learning and
-                                            Cybernetics, International Journal of Intelligent Networks,
-                                            Communications
-                                            and Mobile Computing, PLOS ONE, IEEE
-                                            Access...
-                                        </li>
-                                    </ul>
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-                    <!--SECTION Teaching-->
-                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <heading>Teaching</heading>
-                                    <p align="justify">
-
-                                    <ul>
-                                        <li>
-                                            Design and Analysis of Algorithms, Software Requirement
-                                            Analysis and Modeling, Freshmen Seminar in Beijing University
-                                            of
-                                            Technology.
-                                        </li>
-                                        <li>
-                                            C Language Programming, Scientific Writing, MOOC as a
-                                            teaching assistant in Beihang University.
-                                        </li>
-                                    </ul>
-
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
-                    <p align="center" style="font-size: 14px; color: #666; margin-top: 20px;">Last update: 2026.06</p>
-
-
+    <main class="page-container">
+        <!-- 个人简介区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td width="68%" valign="middle">
+                        <p align="center">
+                            <span class="name">Yu Liang  梁 堉</span>
+                        </p>
+                        <p align="justify">
+                            I am currently an Assistant Professor
+                            of the <a href="https://cs.bjut.edu.cn/index.htm">College of Computer
+                                Science</a>, <a href="https://www.bjut.edu.cn/">Beijing University of
+                                Technology</a>, China. My research interests lie in multimodal artificial
+                            intelligence, with a focus on intelligent
+                            perception, human–computer interaction, cognitive modeling, and educational
+                            technologies.
+                            <br><br>
+                            Prior to this, I received my Ph.D. degree in 2022 from the <a
+                                href="https://scse.buaa.edu.cn/">School of
+                                Computer Science and Engineering</a> and the <a href="https://hc.buaa.edu.cn">Shen Yuan
+                                Honors College</a> (an elite program), <a href="https://www.buaa.edu.cn/">Beihang University</a>,
+                            China,
+                            under the supervision of Prof. <a href="https://iai.buaa.edu.cn/info/1013/1093.htm">Wenjun
+                                Wu</a>. I also obtained my B.Sc. degree from <a href="https://www.buaa.edu.cn/">Beihang University</a> in 2017.
+                            <br><br>
+                            <strong>Email:</strong> yuliang@bjut.edu.cn | yliang@buaa.edu.cn
+                        </p>
+                        <p align="center">
+                            <a href="https://scholar.google.com/citations?user=Ky7Ekn0AAAAJ">Google Scholar</a> |
+                            <a href="https://www.researchgate.net/profile/Yu-Liang-18?ev=hdr_xprf">ResearchGate</a> |
+                            <a href="https://github.com/liangyubuaa">GitHub</a> |
+                            <a href="https://cs.bjut.edu.cn/info/1416/1261.htm">学院官网</a> |
+                            <a href="https://cs.bjut.edu.cn/info/1510/3735.htm">研究生招生</a>
+                        </p>
+                    </td>
+                    <td align="right">
+                        <img class="hp-photo" src="assets/bio.jpg" alt="Photo of Yu Liang">
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 新闻区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td>
+                        <h2 class="section-heading">News</h2>
+
+                        <p style="font-size:14px">
+                            <strong><span class="text-red">[Top]</span></strong>
+                            <strong>Join our lab and shape the future with code!</strong> 欢迎有兴趣在
+                            <a href="https://www.bjut.edu.cn/">北京工业大学</a> (双一流&211工程)
+                            <a href="https://cs.bjut.edu.cn/index.htm">计算机学院</a> 攻读硕士研究生的同学联系我.
+                        </p>
+
+                        <p style="font-size:14px">
+                            <strong><span class="text-red">[Top]</span> [2025.07]</strong>
+                            Call for Paper: Applied Sciences (JCR Q2, IF 2.5) — Special Issue
+                            "<a href="https://www.mdpi.com/journal/applsci/special_issues/VEOEP7430U">Artificial
+                                Intelligence Technologies for Education: Advancements, Challenges, and Impacts, 2nd Edition</a>".
+                            Deadline: <del>31 March 2026</del> <u>31 October 2026</u>.
+                        </p>
+
+                        <p style="font-size:14px"><strong>[2026.06]</strong> One paper on multimodal emotion recognition accepted by Neurocomputing.</p>
+                        <p style="font-size:14px"><strong>[2026.05]</strong> One paper on LoRa networks accepted by Ad Hoc Networks.</p>
+                        <p style="font-size:14px"><strong>[2026.04]</strong> One paper on face aging accepted by IEEE Transactions on Image Processing (TIP).</p>
+                        <p style="font-size:14px"><strong>[2026.03]</strong> One paper on rumor detection accepted by 《计算机工程》.</p>
+                        <p style="font-size:14px"><strong>[2026.02]</strong> One paper on EEG-based emotion recognition framework accepted by IEEE Journal of Biomedical and Health Informatics (JBHI).</p>
+                        <p style="font-size:14px"><strong>[2026.01]</strong> One paper on endoscopic image segmentation accepted by Biomedical Signal Processing and Control.</p>
+
+                        <div id="moreNews">
+                            <p style="font-size:14px"><strong>[2025.11]</strong> One paper on fall detection accepted by 2025 IEEE International Conference on Image Processing, Computer Vision and Machine Learning (ICICML).</p>
+                            <p style="font-size:14px"><strong>[2025.11]</strong> One paper on remote sensing object detection accepted by Scientific Reports.</p>
+                            <p style="font-size:14px"><strong>[2025.11]</strong> One paper on edge intelligence network accepted by International Journal of Intelligent Networks (IJIN).</p>
+                            <p style="font-size:14px"><strong>[2025.10]</strong> One paper on deepfake video detection accepted by IEEE Transactions on Consumer Electronics (TCE).</p>
+                            <p style="font-size:14px"><strong>[2025.08]</strong> Received funding from the National Natural Science Foundation of China.</p>
+                            <p style="font-size:14px"><strong>[2025.08]</strong> One paper on citrus detection accepted by Computers and Electronics in Agriculture.</p>
+                            <p style="font-size:14px"><strong>[2025.06]</strong> One paper on EEG-based emotion recognition accepted by 2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC).</p>
+                            <p style="font-size:14px"><strong>[2025.03]</strong> One paper on power cable detection accepted by 2025 IEEE International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT).</p>
+                            <p style="font-size:14px"><strong>[2025.03]</strong> One paper on student performance prediction accepted by Scientific Reports.</p>
+                            <p style="font-size:14px"><strong>[2025.01]</strong> One paper on few-shot learning accepted by Pattern Recognition.</p>
+                            <p style="font-size:14px"><strong>[2025.01]</strong> Received funding from the Beijing Natural Science Foundation.</p>
+                            <p style="font-size:14px"><strong>[2024.11]</strong> One paper on multi label text classification accepted by Scientific Reports.</p>
+                            <p style="font-size:14px"><strong>[2024.10]</strong> One paper on automatic text summarization accepted by CCF Transactions on Pervasive Computing and Interaction.</p>
+                            <p style="font-size:14px"><strong>[2024.09]</strong> Selected into an Executive Member of the <a href="https://www.ccf.org.cn/Chapters/TC/TC_Listing/TCIR/">Technical Committee on Intelligent Robot, China Computer Federation (CCF TCIR)</a>.</p>
+                            <p style="font-size:14px"><strong>[2024.07]</strong> One paper on medical image segmentation accepted by Neurocomputing.</p>
+                            <p style="font-size:14px"><strong>[2024.04]</strong> One paper on EEG-based emotion classification accepted by Journal of Neural Engineering (JNE).</p>
+                            <p style="font-size:14px"><strong>[2024.04]</strong> One paper on vision-fused attack accepted by IJCAI 2024.</p>
+                            <p style="font-size:14px"><strong>[2024.03]</strong> One paper on knowledge graph accepted by Applied Sciences.</p>
+                            <p style="font-size:14px"><strong>[2023.12]</strong> One paper on reinforcement learning and graph neural network accepted by ICDE 2024.</p>
+                            <p style="font-size:14px"><strong>[2023.12]</strong> Received funding from the Science and Technology Project of the State Grid Corporation of China (SGCC).</p>
+                            <p style="font-size:14px"><strong>[2023.11]</strong> Two papers on smart education accepted by Applied Sciences.</p>
+                            <p style="font-size:14px"><strong>[2023.09]</strong> One paper on educational knowledge graph accepted by 2023 IEEE Frontiers in Education Conference (FIE).</p>
+                            <p style="font-size:14px"><strong>[2023.07]</strong> Call for Paper: Applied Sciences (JCR Q1, IF 2.5) — Special Issue "<a href="https://www.mdpi.com/journal/applsci/special_issues/A10EVOIBT7">Artificial Intelligence Technologies for Education: Advancements, Challenges, and Impacts</a>". <u>Deadline: 30 June 2025</u>.</p>
+                            <p style="font-size:14px"><strong>[2023.06]</strong> One paper on IoT and edge computing accepted by the IEEE 48th Conference on Local Computer Networks (LCN).</p>
+                            <p style="font-size:14px"><strong>[2023.04]</strong> Received funding from the Beijing Postdoctoral Research Foundation.</p>
+                            <p style="font-size:14px"><strong>[2023.02]</strong> One paper on graph transformer accepted by AAAI 2023.</p>
+                            <p style="font-size:14px"><strong>[2022.11]</strong> Received funding from the Open Research Fund of the State Key Lab. of Software Development Environment.</p>
+                            <p style="font-size:14px"><strong>[2022.11]</strong> One paper on peer grading accepted by IEEE Transactions on Learning Technologies.</p>
+                            <p style="font-size:14px"><strong>[2022.11]</strong> Received the Ph.D degree with a <strong>certificate of honor</strong> from Beihang University.</p>
+                            <p style="font-size:14px"><strong>[2022.10]</strong> One paper on interpretable deep knowledge tracing accepted by Scientific Reports.</p>
+                            <p style="font-size:14px"><strong>[2022.03]</strong> One paper on deep knowledge tracing accepted by Scientific Reports.</p>
+                        </div>
+
+                        <p id="moreButton" onclick="toggleNews()">More...</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 学生区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td>
+                        <h2 class="section-heading">Students</h2>
+                        <ul>
+                            <li>Master Students
+                                <ul>
+                                    <li>2026: Ziheng Wang (1 paper accepted by 《计算机工程》), Yudong Zhao</li>
+                                    <li>2025: Jiayan Ma (1 paper accepted by 《计算机工程》), Jiawei Wu (1 paper under review by 《自动化学报》), Xiao Li, Liwen Tian (1 paper under review by 《自动化学报》)</li>
+                                    <li>2024: Yongbin Wang (1 paper accepted by Scientific Reports), Rongqi Cao&dagger; (1 paper accepted by IEEE JBHI)</li>
+                                </ul>
+                            </li>
+                            <li>Alumni
+                                <ul>
+                                    <li>Shuang Niu&dagger;, Master, 09/23 - 06/26, Graduation Destination: Bank of Communications</li>
+                                    <li>Chenlong Zhang&dagger;, Master, 09/22 - 06/25, Graduation Destination: China Telecom Research Institute</li>
+                                    <li>Zaitian Wang&dagger;, Master, 09/22 - 06/25, Graduation Destination: Agricultural Bank of China</li>
+                                    <li>Lexin Yang, Undergraduate, 03/24 - 06/25, Graduation Destination: Master@University of Pennsylvania</li>
+                                    <li>Shuyi Sun, Undergraduate, 03/24 - 06/25, Graduation Destination: Master@University of Pennsylvania</li>
+                                    <li>Ziteng Zhang, Undergraduate, 03/24 - 06/25, Graduation Destination: Master@Nanyang Technological University</li>
+                                    <li>Zelong Li, Undergraduate, 03/24 - 06/25, Graduation Destination: Master@Northeastern University</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>&dagger;: co-supervised</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 基金与项目区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td>
+                        <h2 class="section-heading">Fundings and Projects</h2>
+                        <ul>
+                            <li>National Natural Science Foundation of China, China, 2026.01 to 2028.12.</li>
+                            <li>Beijing Natural Science Foundation, China, 2025.01 to 2026.12.</li>
+                            <li>Science and Technology Project of the State Grid Corporation of China (SGCC), China, 2023.12 to 2025.12.</li>
+                            <li>Beijing Postdoctoral Research Foundation, China, 2023.05 to 2025.01.</li>
+                            <li>Open Research Fund of the State Key Lab. of Software Development Environment, China, 2022.11 to 2023.10.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 服务区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td>
+                        <h2 class="section-heading">Services</h2>
+                        <ul>
+                            <li>Guest Editor of Applied Sciences.</li>
+                            <li>PC/Reviewer for AAAI, IJCAI, ICCV, KDD, DSAA, FIE...</li>
+                            <li>Journal Reviewers of Humanities and Social Sciences Communications, Pattern Recognition, Expert Systems With Applications, IEEE Transactions on Affective Computing, Applied Soft Computing Journal, International Journal of Machine Learning and Cybernetics, International Journal of Intelligent Networks, Communications and Mobile Computing, PLOS ONE, IEEE Access...</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- 教学区块 -->
+        <section>
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tr>
+                    <td>
+                        <h2 class="section-heading">Teaching</h2>
+                        <ul>
+                            <li>Design and Analysis of Algorithms, Software Requirement Analysis and Modeling, Freshmen Seminar in Beijing University of Technology.</li>
+                            <li>C Language Programming, Scientific Writing, MOOC as a teaching assistant in Beihang University.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 页脚：最后更新时间（自动获取服务器端文件修改时间） -->
+        <footer>
+            <p align="center" style="font-size: 14px; color: #666; margin-top: 20px;">
+                Last update:
+                <script>
+                    var d = new Date(document.lastModified);
+                    document.write(d.getFullYear() + '.' + ('0' + (d.getMonth() + 1)).slice(-2));
+                </script>
+            </p>
+        </footer>
+    </main>
+
+    <!-- 折叠新闻脚本 -->
+    <script>
+        function toggleNews() {
+            var moreNews = document.getElementById("moreNews");
+            var moreButton = document.getElementById("moreButton");
+            if (moreNews.style.display === "none" || moreNews.style.display === "") {
+                moreNews.style.display = "block";
+                moreButton.textContent = "Less...";
+            } else {
+                moreNews.style.display = "none";
+                moreButton.textContent = "More...";
+            }
+        }
+    </script>
 
 </body>
-
-<script>
-    function toggleNews() {
-        var moreNews = document.getElementById("moreNews");
-        var moreButton = document.getElementById("moreButton");
-
-        if (moreNews.style.display === "none") {
-            moreNews.style.display = "block";
-            moreButton.innerHTML = "Less...";
-        } else {
-            moreNews.style.display = "none";
-            moreButton.innerHTML = "More...";
-        }
-    }
-</script>
 
 </html>
