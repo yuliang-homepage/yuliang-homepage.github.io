@@ -8,6 +8,9 @@
   <title>Yu Liang (梁堉) — Associate Professor, Beijing University of Technology</title>
   <meta name="description"
     content="Yu Liang is an Associate Professor at Beijing University of Technology. Research interests: multimodal AI, intelligent perception, and AI in education.">
+  <meta name="author" content="Yu Liang">
+  <meta name="theme-color" content="#f8f9fa">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://yuliang-homepage.github.io/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -21,6 +24,7 @@
   <meta property="og:description"
     content="Yu Liang is an Associate Professor at Beijing University of Technology. Research interests: multimodal AI, intelligent perception, and AI in education.">
   <meta property="og:image" content="https://yuliang-homepage.github.io/assets/bio.jpg">
+  <meta property="og:image:alt" content="Portrait of Yu Liang">
   <meta property="og:url" content="https://yuliang-homepage.github.io/">
 
   <meta name="twitter:card" content="summary">
@@ -28,6 +32,7 @@
   <meta name="twitter:description"
     content="Yu Liang is an Associate Professor at Beijing University of Technology. Research interests: multimodal AI, intelligent perception, and AI in education.">
   <meta name="twitter:image" content="https://yuliang-homepage.github.io/assets/bio.jpg">
+  <meta name="twitter:image:alt" content="Portrait of Yu Liang">
 
   <script type="application/ld+json">
   {
@@ -46,7 +51,8 @@
       "name": "Beijing University of Technology",
       "url": "https://www.bjut.edu.cn/"
     },
-    "email": "mailto:yuliang@bjut.edu.cn",
+    "email": "yuliang@bjut.edu.cn",
+    "image": "https://yuliang-homepage.github.io/assets/bio.jpg",
     "url": "https://yuliang-homepage.github.io/",
     "sameAs": [
       "https://orcid.org/0000-0001-5422-0920",
@@ -129,6 +135,27 @@
 
     strong {
       font-weight: 600;
+    }
+
+    /* 跳到主内容（键盘用户） */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      z-index: 200;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--link);
+      background-color: var(--surface);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+      transition: top .18s ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+      color: var(--link);
     }
 
     .container {
@@ -297,15 +324,17 @@
       top: calc(100% + 10px);
       left: 50%;
       transform: translateX(-50%) translateY(-4px);
+      max-width: 200px;
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 500;
       line-height: 1.4;
       letter-spacing: .1px;
+      text-align: center;
+      white-space: normal;
       color: #ffffff;
       background-color: rgba(10, 30, 60, .95);
       border-radius: 6px;
-      white-space: nowrap;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -419,6 +448,11 @@
 
     .student-group:last-of-type {
       margin-bottom: 8px;
+    }
+
+    /* Gallery 区块 */
+    .gallery-group {
+      margin-top: 22px;
     }
 
     /* ============================================================
@@ -577,7 +611,6 @@
       font-weight: 400;
       line-height: 1;
       color: var(--link);
-      cursor: help;
     }
 
     .pub-venue {
@@ -911,7 +944,7 @@
       padding: 5px 14px;
       font-size: 12.5px;
       line-height: 1.5;
-      color: #6b7280;
+      color: var(--text-muted);
       background-color: #f6f8fa;
       border: 1px solid #eaedf2;
       border-radius: 5px;
@@ -940,7 +973,7 @@
     .footer-updated {
       margin: 0;
       font-size: 12px;
-      color: #a6adb8;
+      color: var(--text-muted);
       letter-spacing: .1px;
     }
 
@@ -1159,6 +1192,10 @@
         background: #fff;
       }
 
+      .skip-link {
+        display: none;
+      }
+
       .container {
         max-width: none;
         padding: 0;
@@ -1224,6 +1261,8 @@
 
 <body>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <div class="container">
 
     <!-- 粘性导航栏 -->
@@ -1255,35 +1294,33 @@
              data-tooltip="Faculty Page (CN)"
              aria-label="Faculty Page (CN)">
             <i class="fas fa-university" aria-hidden="true"></i>
-            <span class="sr-only">Faculty Page (CN)</span>
           </a>
           <a href="https://scholar.google.com/citations?user=Ky7Ekn0AAAAJ"
              data-tooltip="Google Scholar"
              aria-label="Google Scholar">
             <i class="ai ai-google-scholar-square" aria-hidden="true"></i>
-            <span class="sr-only">Google Scholar</span>
           </a>
           <a href="https://orcid.org/0000-0001-5422-0920"
              data-tooltip="ORCID"
              aria-label="ORCID">
             <i class="ai ai-orcid-square" aria-hidden="true"></i>
-            <span class="sr-only">ORCID</span>
           </a>
           <a href="https://github.com/liangyubuaa"
              data-tooltip="GitHub"
              aria-label="GitHub">
             <i class="fab fa-github" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span>
           </a>
         </nav>
       </div>
 
       <div class="profile-photo">
-        <img src="assets/bio.jpg" alt="Portrait of Yu Liang" width="156" height="156">
+        <img src="assets/bio.jpg" alt="Portrait of Yu Liang"
+             width="156" height="156"
+             fetchpriority="high" decoding="async">
       </div>
     </header>
 
-    <main>
+    <main id="main">
 
       <!-- 简介 -->
       <div class="profile-bio">
@@ -1319,7 +1356,7 @@
       <section class="section" id="news" aria-labelledby="news-title">
         <h2 id="news-title">News</h2>
 
-        <div class="news-scroll" id="newsScroll" role="region" aria-labelledby="news-title" tabindex="0">
+        <div class="news-scroll" role="region" aria-labelledby="news-title" tabindex="0">
           <ul class="news-list">
             <li class="news-item">
               <span class="tag-featured">[Featured]</span>
@@ -1543,7 +1580,7 @@
               aria-label="Enlarge the framework figure of CLMER">
               <img src="assets/clmer.jpeg"
                 alt="Figure: Overview of the CLMER framework for contrastive learning-based multimodal emotion recognition"
-                loading="lazy" width="360" height="270">
+                loading="lazy" decoding="async" width="360" height="270">
             </button>
 
             <div class="pub-body">
@@ -1551,8 +1588,7 @@
                 Emotion Recognition</h3>
 
               <p class="pub-authors">
-                Shuang Niu, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"
-                  title="Corresponding author">✉</sup>,
+                Shuang Niu, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"><span aria-hidden="true">✉</span><span class="sr-only">Corresponding author</span></sup>,
                 Xiyuan Hu, Shahid Mumtaz, Kaixin Wang, Tianhao Peng, Chenlong Zhang, Zaitian Wang
               </p>
 
@@ -1567,7 +1603,7 @@
                   aria-controls="bib-1">BibTeX</button>
               </div>
 
-              <pre class="pub-bibtex" id="bib-1" hidden>@article{niu2026clmer,
+              <pre class="pub-bibtex" id="bib-1" tabindex="0" aria-label="BibTeX entry" hidden>@article{niu2026clmer,
   title={CLMER: A Framework for Contrastive Learning-Based Multimodal Emotion Recognition},
   author={Niu, Shuang and He, Jian and Liang, Yu and Hu, Xiyuan and Mumtaz, Shahid and Wang, Kaixin and Peng, Tianhao and Zhang, Chenlong and Wang, Zaitian},
   journal={IEEE Transactions on Neural Networks and Learning Systems},
@@ -1582,8 +1618,8 @@
             <button type="button" class="pub-thumb" data-src="assets/clgt.jpeg"
               aria-label="Enlarge the framework figure of CLGT">
               <img src="assets/clgt.jpeg"
-                alt="Figure: Overview of the CLGT graph transformer for student performance prediction" loading="lazy"
-                width="360" height="270">
+                alt="Figure: Overview of the CLGT graph transformer for student performance prediction"
+                loading="lazy" decoding="async" width="360" height="270">
             </button>
 
             <div class="pub-body">
@@ -1591,8 +1627,7 @@
                 in Collaborative Learning</h3>
 
               <p class="pub-authors">
-                Tianhao Peng, <strong class="me">Yu Liang</strong><sup class="corr"
-                  title="Corresponding author">✉</sup>, Wenjun Wu,
+                Tianhao Peng, <strong class="me">Yu Liang</strong><sup class="corr"><span aria-hidden="true">✉</span><span class="sr-only">Corresponding author</span></sup>, Wenjun Wu,
                 Jian Ren, Pengrui Zhao, Yanjun Pu
               </p>
 
@@ -1607,7 +1642,7 @@
                   aria-controls="bib-2">BibTeX</button>
               </div>
 
-              <pre class="pub-bibtex" id="bib-2" hidden>@inproceedings{peng2023clgt,
+              <pre class="pub-bibtex" id="bib-2" tabindex="0" aria-label="BibTeX entry" hidden>@inproceedings{peng2023clgt,
   title={CLGT: A graph transformer for student performance prediction in collaborative learning},
   author={Peng, Tianhao and Liang, Yu and Wu, Wenjun and Ren, Jian and Zhao, Pengrui and Pu, Yanjun},
   booktitle={Proceedings of the AAAI conference on artificial intelligence},
@@ -1624,8 +1659,8 @@
             <button type="button" class="pub-thumb" data-src="assets/cldae.jpeg"
               aria-label="Enlarge the framework figure of CLDAE">
               <img src="assets/cldae.jpeg"
-                alt="Figure: Overview of the CLDAE two-stage EEG-based emotion recognition framework" loading="lazy"
-                width="360" height="270">
+                alt="Figure: Overview of the CLDAE two-stage EEG-based emotion recognition framework"
+                loading="lazy" decoding="async" width="360" height="270">
             </button>
 
             <div class="pub-body">
@@ -1633,8 +1668,7 @@
                 Combining Contrastive Learning and Dual-Attention Encoder</h3>
 
               <p class="pub-authors">
-                Rongqi Cao, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"
-                  title="Corresponding author">✉</sup>,
+                Rongqi Cao, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"><span aria-hidden="true">✉</span><span class="sr-only">Corresponding author</span></sup>,
                 Xiyuan Hu, Tianhao Peng, Wenjun Wu, Shuang Niu, Shahid Mumtaz
               </p>
 
@@ -1649,7 +1683,7 @@
                   aria-controls="bib-3">BibTeX</button>
               </div>
 
-              <pre class="pub-bibtex" id="bib-3" hidden>@article{cao2026cldae,
+              <pre class="pub-bibtex" id="bib-3" tabindex="0" aria-label="BibTeX entry" hidden>@article{cao2026cldae,
   title={CLDAE: A Two Stage EEG-based Emotion Recognition Framework Combining Contrastive Learning and Dual-Attention Encoder},
   author={Cao, Rongqi and He, Jian and Liang, Yu and Hu, Xiyuan and Peng, Tianhao and Wu, Wenjun and Niu, Shuang and Mumtaz, Shahid},
   journal={IEEE Journal of Biomedical and Health Informatics},
@@ -1665,7 +1699,7 @@
               aria-label="Enlarge the framework figure of Milmer">
               <img src="assets/milmer.jpeg"
                 alt="Figure: Overview of the Milmer multiple instance learning framework for multimodal emotion recognition"
-                loading="lazy" width="360" height="270">
+                loading="lazy" decoding="async" width="360" height="270">
             </button>
 
             <div class="pub-body">
@@ -1673,8 +1707,7 @@
                 Multimodal Emotion Recognition</h3>
 
               <p class="pub-authors">
-                Zaitian Wang, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"
-                  title="Corresponding author">✉</sup>,
+                Zaitian Wang, Jian He, <strong class="me">Yu Liang</strong><sup class="corr"><span aria-hidden="true">✉</span><span class="sr-only">Corresponding author</span></sup>,
                 Xiyuan Hu, Tianhao Peng, Kaixin Wang, Jiakai Wang, Chenlong Zhang, Weili Zhang,
                 Shuang Niu, Xiaoyang Xie
               </p>
@@ -1690,7 +1723,7 @@
                   aria-controls="bib-4">BibTeX</button>
               </div>
 
-              <pre class="pub-bibtex" id="bib-4" hidden>@article{wang2026milmer,
+              <pre class="pub-bibtex" id="bib-4" tabindex="0" aria-label="BibTeX entry" hidden>@article{wang2026milmer,
   title={Milmer: a framework for multiple instance learning based multimodal emotion recognition},
   author={Wang, Zaitian and He, Jian and Liang, Yu and Hu, Xiyuan and Peng, Tianhao and Wang, Kaixin and Wang, Jiakai and Zhang, Chenlong and Zhang, Weili and Niu, Shuang and others},
   journal={Neurocomputing},
@@ -1707,7 +1740,7 @@
               aria-label="Enlarge the framework figure of FetchEEG">
               <img src="assets/fetcheeg.jpeg"
                 alt="Figure: Overview of the FetchEEG hybrid feature extraction and temporal-channel joint attention framework"
-                loading="lazy" width="360" height="270">
+                loading="lazy" decoding="async" width="360" height="270">
             </button>
 
             <div class="pub-body">
@@ -1730,7 +1763,7 @@
                   aria-controls="bib-5">BibTeX</button>
               </div>
 
-              <pre class="pub-bibtex" id="bib-5" hidden>@article{liang2024fetcheeg,
+              <pre class="pub-bibtex" id="bib-5" tabindex="0" aria-label="BibTeX entry" hidden>@article{liang2024fetcheeg,
   title={FetchEEG: a hybrid approach combining feature extraction and temporal-channel joint attention for EEG-based emotion classification},
   author={Liang, Yu and Zhang, Chenlong and An, Shan and Wang, Zaitian and Shi, Kaize and Peng, Tianhao and Ma, Yuqing and Xie, Xiaoyang and He, Jian and Zheng, Kun},
   journal={Journal of Neural Engineering},
@@ -1815,23 +1848,29 @@
         <p class="sub-note"><sup>&dagger;</sup> Co-supervised.</p>
 
         <!-- Gallery -->
-        <div class="student-group" style="margin-top: 22px;">
+        <div class="student-group gallery-group">
           <h3 class="group-title">Gallery</h3>
 
           <div class="photo-scroll" id="photoScroll" role="region" aria-label="Photo gallery, auto-scrolling">
-            <button type="button" class="photo-card" data-src="assets/001.jpeg">
-              <img src="assets/001.jpeg" alt="Group photo of lab members at a gathering" loading="lazy" width="220"
-                height="165">
+            <button type="button" class="photo-card" data-src="assets/001.jpeg"
+              aria-label="Enlarge photo: group photo of lab members at a gathering">
+              <img src="assets/001.jpeg" alt="Group photo of lab members at a gathering"
+                loading="lazy" decoding="async" width="220" height="165">
             </button>
-            <button type="button" class="photo-card" data-src="assets/002.jpeg">
-              <img src="assets/002.jpeg" alt="Group photo of lab members during an activity" loading="lazy" width="220"
-                height="165">
+            <button type="button" class="photo-card" data-src="assets/002.jpeg"
+              aria-label="Enlarge photo: group photo of lab members during an activity">
+              <img src="assets/002.jpeg" alt="Group photo of lab members during an activity"
+                loading="lazy" decoding="async" width="220" height="165">
             </button>
-            <button type="button" class="photo-card" data-src="assets/003.jpeg">
-              <img src="assets/003.jpeg" alt="Group photo at a conference" loading="lazy" width="220" height="165">
+            <button type="button" class="photo-card" data-src="assets/003.jpeg"
+              aria-label="Enlarge photo: group photo at a conference">
+              <img src="assets/003.jpeg" alt="Group photo at a conference"
+                loading="lazy" decoding="async" width="220" height="165">
             </button>
-            <button type="button" class="photo-card" data-src="assets/004.jpeg">
-              <img src="assets/004.jpeg" alt="Students presenting their work" loading="lazy" width="220" height="165">
+            <button type="button" class="photo-card" data-src="assets/004.jpeg"
+              aria-label="Enlarge photo: students presenting their work">
+              <img src="assets/004.jpeg" alt="Students presenting their work"
+                loading="lazy" decoding="async" width="220" height="165">
             </button>
           </div>
         </div>
@@ -1900,10 +1939,12 @@
     <footer class="footer">
       <!-- 地图 + 计数小遮罩（上下排布，无 You are visitor） -->
       <div class="footer-visitors">
-        <a title="free world map tracker" href="https://smallcounter.com/vmap/1790744584/" target="_blank" rel="noopener">
+        <a title="free world map tracker" href="https://smallcounter.com/vmap/1790744584/" target="_blank"
+          rel="noopener noreferrer">
           <img class="visitor-map-img" title="free world map counter"
                src="https://smallcounter.com/map/view.php?type=180&id=1790744584"
-               border="1" alt="world map hits counter" />
+               alt="world map hits counter"
+               loading="lazy" decoding="async" />
         </a>
 
         <!-- Visitors · Views 小遮罩 -->
@@ -1961,8 +2002,8 @@
         var prefersReduced = window.matchMedia &&
           window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        var paused = false;
-        var forcePaused = false;
+        var paused = false;       // 交互暂停（hover / focus / touch / wheel）
+        var forcePaused = false;  // 灯箱打开或页面隐藏
         var rafId = null;
         var userTimer = null;
         var direction = 1;
@@ -2023,6 +2064,15 @@
         };
       })();
 
+      /* 页面不可见时暂停自动滚动，回到页面恢复 */
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          photoAutoScroll.forcePause();
+        } else {
+          photoAutoScroll.forceResume();
+        }
+      });
+
       /* Scroll spy */
       var navList = document.getElementById('navList');
       var navLinks = navList ? Array.prototype.slice.call(navList.querySelectorAll('a')) : [];
@@ -2064,7 +2114,7 @@
           var active = item === current;
           item.link.classList.toggle('is-active', active);
           if (active) {
-            item.link.setAttribute('aria-current', 'true');
+            item.link.setAttribute('aria-current', 'location');
           } else {
             item.link.removeAttribute('aria-current');
           }
@@ -2134,6 +2184,7 @@
       var lightbox = document.getElementById('lightbox');
       var lightboxImg = document.getElementById('lightboxImg');
       var lightboxClose = document.getElementById('lightboxClose');
+      var pageContainer = document.querySelector('.container');
       var zoomTargets = document.querySelectorAll('.photo-card, .pub-thumb');
 
       if (lightbox && lightboxImg && lightboxClose && zoomTargets.length) {
@@ -2150,6 +2201,8 @@
           lightbox.classList.add('is-open');
           document.body.style.overflow = 'hidden';
 
+          if (pageContainer) pageContainer.inert = true;
+
           photoAutoScroll.forcePause();
           lightboxClose.focus();
         }
@@ -2157,6 +2210,8 @@
         function closeLightbox() {
           lightbox.classList.remove('is-open');
           document.body.style.overflow = '';
+
+          if (pageContainer) pageContainer.inert = false;
 
           if (lastFocused && typeof lastFocused.focus === 'function') {
             lastFocused.focus();
@@ -2187,18 +2242,30 @@
           if (e.target === lightbox) closeLightbox();
         });
 
+        lightboxImg.addEventListener('error', function () {
+          lightboxImg.alt = 'Image failed to load';
+        });
+
         document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+          if (!lightbox.classList.contains('is-open')) return;
+
+          if (e.key === 'Escape') {
+            e.preventDefault();
             closeLightbox();
+          } else if (e.key === 'Tab') {
+            /* 焦点陷阱：灯箱打开时只在关闭按钮上循环 */
+            e.preventDefault();
+            lightboxClose.focus();
           }
         });
       }
 
-      /* 页脚最后更新时间 */
+      /* 页脚最后更新时间（仅在解析结果合理时覆盖手工日期） */
       var updated = document.getElementById('last-updated');
       if (updated) {
         var d = new Date(document.lastModified);
-        if (!isNaN(d.getTime())) {
+        var now = new Date();
+        if (!isNaN(d.getTime()) && d.getFullYear() >= 2024 && d <= now) {
           var y = d.getFullYear();
           var m = String(d.getMonth() + 1).padStart(2, '0');
           updated.dateTime = y + '-' + m;
@@ -2209,7 +2276,7 @@
   </script>
 
   <!-- 不蒜子访问统计（Visitors / Views 计数） -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 
